@@ -4,7 +4,7 @@
    $password="";
    $connect=mysqli_connect($server,$username,$password);
    if($connect){
-       echo "server connect successfully";
+       echo "registration successfull";
 
    }
    else{

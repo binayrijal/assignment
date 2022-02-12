@@ -1,7 +1,8 @@
 <?php
  if(isset($_GET['error'])){
+     $errormsg=$_GET['error'];
      $errormsg= unserialize( $_GET['error']);
-     echo"<ul>";
+     echo"<ul style='color:red'>";
      foreach($errormsg as $errors){
          echo"<li>$errors</li>";
      }
@@ -59,7 +60,7 @@
                 <a>Contact us</a>
                 <a>More</a>
             </div>
-            <form style="position:relative;left:600px;top:100px; width:fit-content;">
+            <form  action="submit.php" method="post"style="position:relative;left:600px;top:100px; width:fit-content;">
               Name:<input type="text" name="name" style="margin-top:20px; padding:10px;"  required></br>
               Roll:<input type="number" name="roll" style="margin-top:20px;padding:10px;" required></br>
               Dob:<input type="date" name="date" style="margin-top:20px;padding:10px;" required></br>

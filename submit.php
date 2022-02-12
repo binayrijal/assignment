@@ -58,12 +58,11 @@
             }
             
             
-            if(count($error)==0){
+            if(count($error)=='0'){
                 $select=mysqli_select_db($connect,'assignment');
-                echo $username;
-                echo $userroll;
+               
                 if($select){
-                    $query1="CREATE TABLE user(name VARCHAR(50),roll INT(6) AUTO_INCREMENT PRIMARY KEY, date DATE(10),email VARCHAR(100) NOT NULL,add TEXT(100), phone INT(10) NOT NULL";
+                    $query1="CREATE TABLE user(name VARCHAR(50),roll INT(6) AUTO_INCREMENT PRIMARY KEY, date date(10),email VARCHAR(100) NOT NULL,add TEXT(100), phone INT(10) NOT NULL";
                     $result1=mysqli_query($connect,$query1);
                     
                 
