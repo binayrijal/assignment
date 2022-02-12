@@ -1,9 +1,12 @@
 <?php
+
+     
  if(isset($_GET['error'])){
-     $errormsg=$_GET['error'];
-     $errormsg= unserialize( $_GET['error']);
+     $error=array();
+     $error=$_GET['error'];
+     $error= unserialize( $_GET['error']);
      echo"<ul style='color:red'>";
-     foreach($errormsg as $errors){
+     foreach($error as $errors){
          echo"<li>$errors</li>";
      }
      echo"</ul>";

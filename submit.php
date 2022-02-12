@@ -1,5 +1,5 @@
 <?php
-     require_once('connect.php');
+     
     if($_SERVER['REQUEST_METHOD']=='POST'){
             $username=$_POST['name'];
             $userroll=$_POST['roll'];
@@ -59,10 +59,11 @@
             
             
             if(count($error)=='0'){
+               
                 $select=mysqli_select_db($connect,'assignment');
                
                 if($select){
-                    $query1="CREATE TABLE user(name VARCHAR(50),roll INT(6) AUTO_INCREMENT PRIMARY KEY, date date(10),email VARCHAR(100) NOT NULL,add TEXT(100), phone INT(10) NOT NULL";
+                    $query1="CREATE TABLE user(name VARCHAR(50),roll INT(6) AUTO_INCREMENT PRIMARY KEY, date DATE,email VARCHAR(100) NOT NULL,add VARCHAR(100), phone INT(10) NOT NULL)";
                     $result1=mysqli_query($connect,$query1);
                     
                 
